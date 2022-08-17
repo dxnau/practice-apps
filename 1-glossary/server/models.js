@@ -13,6 +13,14 @@ module.exports = {
   post: function(entry) {
     const newWord = new db({word: entry.word, definition: entry.definition});
     return newWord.save();
+  },
+
+  update: function(entry) {
+    //update entry
+  },
+
+  delete: function(entry) {
+    //return db.deleteOne(entry);
   }
 }
 

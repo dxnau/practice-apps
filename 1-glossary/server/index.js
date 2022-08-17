@@ -35,5 +35,13 @@ app.post('/dictionary', (req, res) => {
     });
 });
 
+app.put('/dictionary', (req, res) => {
+  //Call update from models
+});
+
+app.delete('/dictionary', (req, res) => {
+  //Call delete from models
+});
+
 app.listen(PORT);
 console.log(`Listening at http://localhost:${PORT}`);
