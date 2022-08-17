@@ -1,0 +1,18 @@
+const mongoose = require("mongoose");
+const axios = require('axios');
+const db = require('./db.js');
+const express = require("express");
+const app = express();
+
+module.exports = {
+
+  getAll: function() {
+    return db.find({});
+  },
+
+  post: function(entry) {
+    const newWord = new db({word: entry.word, definition: entry.definition});
+    return newWord.save();
+  }
+}
+
