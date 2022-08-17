@@ -20,7 +20,7 @@ module.exports = {
   },
 
   delete: function(entry) {
-    //return db.deleteOne(entry);
+    return db.deleteOne(entry);
   }
 }
 

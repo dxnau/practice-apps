@@ -40,7 +40,15 @@ app.put('/dictionary', (req, res) => {
 });
 
 app.delete('/dictionary', (req, res) => {
-  //Call delete from models
+  models.delete(req.body)
+  .then((response) => {
+    console.log('Deleted entry')
+    res.status(204).send(response);
+  })
+  .catch((err) => {
+    console.log('unable to delete entry');
+    res.status(404).send(err);
+  });
 });
 
 app.listen(PORT);
