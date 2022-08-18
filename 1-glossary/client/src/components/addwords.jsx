@@ -32,6 +32,7 @@ class AddWords extends React.Component {
   render() {
     return (
       <div>
+        <h1>Add to Dictionary</h1>
         Add a word:<input onChange={this.updateWord}></input>
         <br></br>
         Definition:<input onChange={this.updateDefinition}></input>

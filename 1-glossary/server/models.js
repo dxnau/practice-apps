@@ -16,7 +16,7 @@ module.exports = {
   },
 
   // update: function(entry) {
-  //   //update entry
+  //   return db.updateOne(entr.body, updatedEntry);
   // },
 
   delete: function(entry) {

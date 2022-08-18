@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import WordList from "./components/wordlist.jsx";
 import AddWords from "./components/addwords.jsx";
+import Search from "./components/search.jsx";
 const axios = require('axios');
 
 class App extends React.Component {
@@ -51,6 +52,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Search></Search>
         <AddWords addWord={this.addWord.bind(this)}></AddWords>
         <WordList words={this.state.words} delete={this.delete.bind(this)}></WordList>
       </div>
