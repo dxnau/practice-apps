@@ -1,8 +1,8 @@
 import React from 'react';
 
-var Delete = () => {
+var Delete = (props) => {
   return (
-    <button>Delete</button>
+    <button onClick={() => {props.delete(props.word)}}>Delete</button>
   )
 }
 

@@ -14,7 +14,6 @@ app.get('/dictionary', (req, res) => {
   models.getAll()
     //Retrieved info from database
     .then((response) => {
-      console.log('Got info')
       res.status(200).send(response);
     })
     .catch((err) => {
@@ -35,9 +34,9 @@ app.post('/dictionary', (req, res) => {
     });
 });
 
-app.put('/dictionary', (req, res) => {
-  //Call update from models
-});
+// app.put('/dictionary', (req, res) => {
+//   models.
+// });
 
 app.delete('/dictionary', (req, res) => {
   models.delete(req.body)

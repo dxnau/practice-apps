@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Update = () => {
+var Update = (props) => {
   return (
     <button>Update</button>
   )

@@ -16,8 +16,12 @@ var WordList = (props) => {
           <div id="word-definition">
           {word.definition}
           </div>
+
           <Update></Update>
-          <Delete></Delete>
+          <Delete
+            word={word}
+            delete={props.delete}>
+          </Delete>
         </div>
         )
       })}

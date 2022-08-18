@@ -15,9 +15,9 @@ module.exports = {
     return newWord.save();
   },
 
-  update: function(entry) {
-    //update entry
-  },
+  // update: function(entry) {
+  //   //update entry
+  // },
 
   delete: function(entry) {
     return db.deleteOne(entry);

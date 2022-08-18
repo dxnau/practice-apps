@@ -24,6 +24,18 @@ class App extends React.Component {
     .catch((err) => err);
   }
 
+  delete(word) {
+    axios.delete('/dictionary', word)
+    .then ((response) => {
+      axios.get('/dictionary')
+      .then((response) => {
+        this.setState({words: response.data})
+      })
+      .catch((err) => err);
+    })
+    .catch((err) => err);
+  }
+
   componentDidMount() {
     axios.get('/dictionary')
     .then((response) => {
@@ -40,7 +52,7 @@ class App extends React.Component {
     return (
       <div>
         <AddWords addWord={this.addWord.bind(this)}></AddWords>
-        <WordList words={this.state.words}></WordList>
+        <WordList words={this.state.words} delete={this.delete.bind(this)}></WordList>
       </div>
     )
   }
