@@ -34,9 +34,18 @@ app.post('/dictionary', (req, res) => {
     });
 });
 
-// app.put('/dictionary', (req, res) => {
-//   models.
-// });
+app.put('/dictionary', (req, res) => {
+  console.log('REquest body is: ', req.body)
+  models.update(req.body)
+    .then ((response) => {
+      console.log('Updated')
+      res.sendStatus(200);
+    })
+    .catch((err) => {
+      console.log('Error updating. The error is: ', err)
+      res.sendStatus(404);
+    })
+});
 
 app.delete('/dictionary', (req, res) => {
   models.delete(req.body)

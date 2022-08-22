@@ -15,9 +15,10 @@ module.exports = {
     return newWord.save();
   },
 
-  // update: function(entry) {
-  //   return db.updateOne(entr.body, updatedEntry);
-  // },
+  update: function(entry) {
+    console.log('In models, id is: ', entry._id);
+    return db.findByIdAndUpdate(entry._id, {word: 'Random Update', definition: 'Random Update'});
+  },
 
   delete: function(entry) {
     return db.deleteOne(entry);

@@ -59,7 +59,7 @@ main {
   margin: auto;
 }
 
-.wordlist {
+.word-list-entry {
   border-style: solid;
   padding: 10px;
 }
@@ -67,3 +67,12 @@ main {
 #word-name {
   font-weight: bold;
 }
+
+#update-form {
+  border-style: dashed;
+  border-color: lightcoral;
+}
+
+/* #update-form {
+  display: none;
+} */

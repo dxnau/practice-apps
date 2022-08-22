@@ -1,32 +1,22 @@
 import React from "react";
-import Update from './update.jsx';
-import Delete from './delete.jsx';
+import WordListEntry from "./wordlistentry.jsx";
 
 var WordList = (props) => {
-  return (
-    <div>
+  return(
+    <div class="word-list">
       <h1>Dictionary</h1>
-      {props.words.map((word) => {
-        return (
-        <div class="wordlist">
-          <div id="word-name">
-            {word.word}
-          </div>
-
-          <div id="word-definition">
-          {word.definition}
-          </div>
-
-          <Update></Update>
-          <Delete
-            word={word}
-            delete={props.delete}>
-          </Delete>
-        </div>
-        )
-      })}
+      {props.words.map((word) => (
+        <WordListEntry
+          word={word}
+          update={props.update}
+          delete={props.delete}
+        />
+      ))}
     </div>
   )
 }
 
+// update={props.update}
+// delete={props.delete}
+//<button onClick={(event) => {this.updateWord(word)}}>Update</button>
 export default WordList;

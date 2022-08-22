@@ -8,12 +8,12 @@ class AddWords extends React.Component {
       definition: ''
     };
 
-    this.updateWord = this.updateWord.bind(this);
+    this.createWord = this.createWord.bind(this);
     this.updateDefinition = this.updateDefinition.bind(this);
     this.submit = this.submit.bind(this);
   }
 
-  updateWord(event) {
+  createWord(event) {
     this.setState({
       word: event.target.value
     });
@@ -33,7 +33,7 @@ class AddWords extends React.Component {
     return (
       <div>
         <h1>Add to Dictionary</h1>
-        Add a word:<input onChange={this.updateWord}></input>
+        Add a word:<input onChange={this.createWord}></input>
         <br></br>
         Definition:<input onChange={this.updateDefinition}></input>
         <br></br>
