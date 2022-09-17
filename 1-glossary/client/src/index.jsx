@@ -69,6 +69,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        Hello world
         <Search></Search>
         <AddWords addWord={this.addWord}></AddWords>
 
